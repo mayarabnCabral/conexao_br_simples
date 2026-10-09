@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os projetos sociais da Conexão BR, saiba como ser voluntário e como doar.">
+    <title>Projetos - Conexão BR</title>
+    <link rel="icon" type="image/webp" href="midia/Logo_conexao_br_v2-removebg-preview.webp">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <!-- Configuração de fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+<body>
+    <header class="menu">
+        <a href="index.html" aria-label="Conexão BR - página inicial">
+            <img src="midia/logo_branco-removebg-preview.webp" alt="Logotipo circular da ONG Conexão BR nas cores verde, azul e amarelo, com figuras humanas de mãos dadas, um livro aberto, uma ponte e uma bússola com a bandeira do Brasil" class="logo">
+        </a>
+        <nav aria-label="Menu principal">
+            <ul class="links-nav">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+                <li><a href="doar.html">Doar</a></li>
+                <li><a href="cadastro.html">Cadastrar-se</a></li>
+            </ul>
+        </nav>
+        <div class="links-nav">
+            <a href="https://github.com/mayarabnCabral/conexao_br" target="_blank" rel="noopener noreferrer"
+                aria-label="Repositório do projeto no GitHub">
+                <i class="devicon-github-original" aria-hidden="true"></i>
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="container-banner-projetos">
+            <div class="coluna-texto-img">
+                <div class="texto-banner">
+                    <h1>Conheça nossos projetos</h1>
+                    <h4>Explore nossas iniciativas: promovemos educação, inclusão, diversidade e muito mais.</h4>
+                </div>
+                <img src="midia/planta.webp" class="banner" alt="Mão segurando uma muda de planta">
+            </div>
+        </section>
+
+        <form class="pesquisa" id="form-pesquisa" action="#" method="get" role="search" aria-label="Filtrar projetos">
+            <div class="linha-busca">
+                <label for="busca" class="sr-only">Nome do projeto</label>
+                <input type="search" id="busca" name="busca" placeholder="Digite o nome desejado">
+                <button type="submit" class="btn-pesquisar">Pesquisar</button>
+            </div>
+            <div class="campo">
+                <label class="filtro-sede" for="sede"><b>Sede:</b></label>
+                <select name="sede" id="sede" class="filtros">
+                    <option value="todos" selected>Todos</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="am">Manaus</option>
+                    <option value="pe">Pernambuco (Recife)</option>
+                    <option value="df">Brasília</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label class="filtro-sede" for="area"><b>Área:</b></label>
+                <select name="area" id="area" class="filtros">
+                    <option value="todos" selected>Todos</option>
+                    <option value="linguagens">Educação Linguística e Alfabetização</option>
+                    <option value="profissional">Qualificação Profissional e Empregabilidade</option>
+                    <option value="reforco">Apoio Escolar e Reforço</option>
+                    <option value="direito">Orientação Legal, Social e Cidadania</option>
+                    <option value="cultura">Valorização Cultural e Integração Comunitária</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label class="filtro-sede" for="publico"><b>Público-alvo:</b></label>
+                <select name="publico" id="publico" class="filtros">
+                    <option value="todos" selected>Todos</option>
+                    <option value="criancas">Crianças</option>
+                    <option value="jovens">Jovens</option>
+                    <option value="adultos">Adultos</option>
+                    <option value="idosos">Idosos</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label class="filtro-sede" for="formato"><b>Formato:</b></label>
+                <select name="formato" id="formato" class="filtros">
+                    <option value="todos" selected>Todos</option>
+                    <option value="presencial">Presencial</option>
+                    <option value="hibrido">Híbrido</option>
+                    <option value="online">Online</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label class="filtro-sede" for="status"><b>Status:</b></label>
+                <select name="status" id="status" class="filtros">
+                    <option value="todos" selected>Todos</option>
+                    <option value="abertas">Inscrições abertas</option>
+                    <option value="andamento">Em andamento</option>
+                    <option value="finalizados">Finalizados</option>
+                </select>
+            </div>
+        </form>
+
+        <section class="atividades">
+            <h2>Projetos ativos</h2>
+            <div class="grid-projetos" id="lista-projetos">
+                <article class="projeto" data-nome="Portas Abertas: Português para Imigrantes" data-area="linguagens" data-publico="adultos" data-formato="hibrido" data-status="abertas" data-sede="sp am pe df">
+                    <h3>Portas Abertas: Português para Imigrantes</h3>
+                    <p>
+                        <b>Área:</b> Educação Linguística e Alfabetização<br>
+                        <b>Público-alvo:</b> Adultos<br>
+                        <b>Formato:</b> Híbrido<br>
+                        <b>Status:</b> Inscrições abertas<br>
+                        <b>Unidades:</b> Todas
+                    </p>
+                    <p>Curso de português básico focado no cotidiano, mercado de trabalho e conversação, voltado especialmente para refugiados recém-chegados ao país.</p>
+                    <a class="btn-projetos" href="cadastro.html">Cadastrar-se</a>
+                </article>
+                <article class="projeto" data-nome="Semente do Saber: Reforço Escolar Comunitário" data-area="reforco" data-publico="criancas jovens" data-formato="presencial" data-status="abertas" data-sede="sp am pe df">
+                    <h3>Semente do Saber: Reforço Escolar Comunitário</h3>
+                    <p>
+                        <b>Área:</b> Apoio Escolar e Reforço para Crianças e Jovens<br>
+                        <b>Público-alvo:</b> Crianças e jovens<br>
+                        <b>Formato:</b> Presencial<br>
+                        <b>Status:</b> Inscrições abertas<br>
+                        <b>Unidades:</b> Todas
+                    </p>
+                    <p>Atividades de reforço em matemática e leitura no contraturno escolar para crianças em situação de vulnerabilidade social.</p>
+                    <a class="btn-projetos" href="cadastro.html">Cadastrar-se</a>
+                </article>
+                <article class="projeto" data-nome="TechFuturo: Programação para Jovens" data-area="profissional" data-publico="jovens adultos" data-formato="presencial" data-status="abertas" data-sede="sp">
+                    <h3>TechFuturo: Programação para Jovens</h3>
+                    <p>
+                        <b>Área:</b> Qualificação Profissional e Empregabilidade<br>
+                        <b>Público-alvo:</b> Jovens e adultos<br>
+                        <b>Formato:</b> Presencial<br>
+                        <b>Status:</b> Inscrições abertas<br>
+                        <b>Unidades:</b> São Paulo
+                    </p>
+                    <p>Introdução à programação e ao mundo da tecnologia, com aulas práticas de lógica, HTML e CSS para quem busca uma nova profissão.</p>
+                    <a class="btn-projetos" href="cadastro.html">Cadastrar-se</a>
+                </article>
+                <article class="projeto" data-nome="Cidadania sem Fronteiras" data-area="direito" data-publico="adultos" data-formato="online" data-status="abertas" data-sede="sp am pe df">
+                    <h3>Cidadania sem Fronteiras</h3>
+                    <p>
+                        <b>Área:</b> Orientação Legal, Social e Cidadania<br>
+                        <b>Público-alvo:</b> Adultos<br>
+                        <b>Formato:</b> Online<br>
+                        <b>Status:</b> Inscrições abertas<br>
+                        <b>Unidades:</b> Todas
+                    </p>
+                    <p>Orientação sobre documentação, direitos e acesso a serviços públicos para imigrantes e refugiados.</p>
+                    <a class="btn-projetos" href="cadastro.html">Cadastrar-se</a>
+                </article>
+                <article class="projeto" data-nome="Pontes Culturais: Artesanato e Integração" data-area="cultura" data-publico="idosos" data-formato="presencial" data-status="andamento" data-sede="sp am pe df">
+                    <h3>Pontes Culturais: Artesanato e Integração</h3>
+                    <p>
+                        <b>Área:</b> Valorização Cultural e Integração Comunitária<br>
+                        <b>Público-alvo:</b> Idosos<br>
+                        <b>Formato:</b> Presencial<br>
+                        <b>Status:</b> Em andamento<br>
+                        <b>Unidades:</b> Todas
+                    </p>
+                    <p>Oficina de troca de saberes artesanais entre imigrantes (com forte presença indígena e latino-americana na região) e a comunidade local.</p>
+                    <span class="btn-projetos btn-desativado" aria-disabled="true">Inscrições encerradas</span>
+                </article>
+                <article class="projeto" data-nome="Alfabetiza Mais" data-area="linguagens" data-publico="adultos idosos" data-formato="hibrido" data-status="abertas" data-sede="sp am pe df">
+                    <h3>Alfabetiza Mais</h3>
+                    <p>
+                        <b>Área:</b> Educação Linguística e Alfabetização<br>
+                        <b>Público-alvo:</b> Adultos e idosos<br>
+                        <b>Formato:</b> Híbrido<br>
+                        <b>Status:</b> Inscrições abertas<br>
+                        <b>Unidades:</b> Todas
+                    </p>
+                    <p>Alfabetização de jovens e adultos que não tiveram acesso à educação formal na infância.</p>
+                    <a class="btn-projetos" href="cadastro.html">Cadastrar-se</a>
+                </article>
+                <article class="projeto" data-nome="Jovem Empreendedor Social" data-area="profissional" data-publico="jovens" data-formato="presencial" data-status="abertas" data-sede="sp am pe df">
+                    <h3>Jovem Empreendedor Social</h3>
+                    <p>
+                        <b>Área:</b> Qualificação Profissional e Empregabilidade<br>
+                        <b>Público-alvo:</b> Jovens<br>
+                        <b>Formato:</b> Presencial<br>
+                        <b>Status:</b> Inscrições abertas<br>
+                        <b>Unidades:</b> Todas
+                    </p>
+                    <p>Capacitação em gestão financeira básica, marketing digital para pequenos negócios e elaboração de currículos.</p>
+                    <a class="btn-projetos" href="cadastro.html">Cadastrar-se</a>
+                </article>
+            </div>
+            <p class="sem-resultado" id="sem-resultado" role="status" hidden>Nenhum projeto encontrado. Tente mudar os filtros.</p>
+        </section>
+
+        <section class="container-grid-sobre sem-margem">
+            <div class="texto-sobre-grid" id="voluntariado">
+                <h2>Seja voluntário</h2>
+                <p>
+                    Você pode ajudar como professor, tradutor, monitor de reforço escolar ou apoio administrativo.
+                    Não é preciso experiência: basta vontade de aprender e de compartilhar o que sabe.
+                </p>
+                <ol>
+                    <li>Faça seu cadastro.</li>
+                    <li>Escolha o projeto e a sede de sua preferência.</li>
+                    <li>Aguarde o contato da nossa equipe.</li>
+                </ol>
+                <a class="btn-acao" href="cadastro.html">Quero ser voluntário</a>
+                <br>
+            </div>
+            <div class="texto-sobre-grid" id="como-doar" style="background-color:#3b8766">
+                <h2>Como doar</h2>
+                <p>
+                    Sua doação financeira ou de materiais mantém nossos cursos gratuitos e acessíveis. Veja as
+                    formas de contribuir e para onde vai cada recurso.
+                </p>
+                <a class="btn-acao" href="doar.html">Quero doar</a>
+                <br>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p><b>ONG fictícia, direitos reservados a Mayara, Luz e Bruno © 2026 Conexão BR - CNPJ: 00.000.000/0000-00 - Rua Inventada, 555, São Paulo, SP - CEP: 00000-000</b></p>
+    </footer>
+</body>
+
+</html>

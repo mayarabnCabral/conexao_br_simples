@@ -1,0 +1,647 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #222;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* links dentro de texto corrido (sem classe) */
+main a:not([class]) {
+    color: #23523b;
+    text-decoration: underline;
+}
+
+.texto-sobre-grid a:not([class]),
+.destaque-verde a:not([class]) {
+    color: #fff;
+}
+
+:focus-visible {
+    outline: 3px solid #23523b;
+    outline-offset: 3px;
+}
+
+.menu :focus-visible,
+footer :focus-visible,
+.texto-sobre-grid :focus-visible {
+    outline-color: #FBD012;
+}
+
+footer {
+    background: linear-gradient(to right, #408a87, #429c63);
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    margin: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.centralizar {
+    text-align: center;
+}
+
+/*
+=====================================================
+                    Inicio config Menu
+=====================================================
+*/
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: linear-gradient(to right, #408a87, #429c63);
+    width: 100%;
+    min-height: 80px;
+    padding: 0 40px;
+}
+
+.logo {
+    width: 70px;
+    display: block;
+}
+
+.links-nav {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.links-nav a {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.links-nav a:hover,
+.links-nav a[aria-current="page"] {
+    color: #FBD012;
+}
+
+.links-nav a[aria-current="page"] {
+    border-bottom: 3px solid #FBD012;
+    padding-bottom: 2px;
+}
+
+.links-nav i {
+    font-size: 28px;
+}
+
+/*
+=====================================================
+                    Fim config Menu
+=====================================================
+*/
+
+
+/*
+=====================================================
+                    Inicio config Index.html
+=====================================================
+*/
+
+.imagem-index {
+    display: block;
+    width: 1000px;
+    max-width: 90%;
+    margin: 70px auto;
+}
+
+.resumo {
+    text-align: center;
+    padding: 40px clamp(20px, 8vw, 160px);
+    background-color: #d7d6d6;
+}
+
+.resumo blockquote {
+    margin: 0 0 24px;
+    font-style: italic;
+}
+
+.resumo blockquote p {
+    margin: 0;
+}
+
+.resumo h2 {
+    color: #41976D;
+}
+
+.container-grid-index {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 70px;
+    gap: 60px;
+}
+
+footer h4 {
+    color: #FBD012;
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+.btn-acao {
+    display: flex;
+    justify-content: center;
+    padding: 15px 25px;
+    background-color: #FBD012;
+    color: #222;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    margin-top: 20px;
+    font-family: inherit;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btn-acao:hover {
+    background-color: #e0b800;
+}
+
+.contato {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #41976D;
+    color: #fff;
+}
+
+.contato h2 {
+    margin-top: 0;
+}
+
+.contato address {
+    font-style: normal;
+}
+
+.contato p {
+    margin: 6px 0;
+}
+
+/*
+=====================================================
+                    Fim config Index.html
+=====================================================
+*/
+
+/*
+=====================================================
+                    Inicio config Sobre.html
+=====================================================
+*/
+
+.texto-sobre-grid {
+    background-color: #41976D;
+    color: #fff;
+    padding: 9px 30px;
+}
+
+.texto-sobre-grid h1,
+.texto-sobre-grid h2 {
+    text-align: center;
+}
+
+.texto-sobre-grid p,
+.texto-sobre-grid li {
+    text-align: start;
+    font-size: 21px;
+}
+
+.container-grid-sobre {
+    margin: 70px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+}
+
+.container-grid-sobre.sem-margem {
+    margin: 0 auto;
+}
+
+.img-sobre {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.titulo-sobre {
+    color: #41976D;
+}
+
+.espaco-sobre {
+    gap: 100px;
+    padding: 30px 70px;
+}
+
+.valores-sobre {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 40px;
+    padding: 30px 70px;
+    background-color: #ffffff;
+}
+
+.valores-sobre p {
+    text-align: center;
+    margin: 0;
+}
+
+.img-sedes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 100px;
+    align-items: start;
+    padding: 20px 100px 100px;
+}
+
+.img-sedes {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.espacamento-img {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.espacamento-img p {
+    margin: 0;
+}
+
+.btn-projetos {
+    display: flex;
+    justify-content: center;
+    padding: 15px 25px;
+    background-color: #41976D;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    margin-top: 20px;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-projetos:hover {
+    background-color: #23523b;
+}
+
+.btn-desativado {
+    background-color: #8a8a8a;
+    cursor: default;
+}
+
+.btn-desativado:hover {
+    background-color: #8a8a8a;
+}
+
+/*
+=====================================================
+                    Fim config Sobre.html
+=====================================================
+*/
+
+
+/*
+=====================================================
+                    Inicio config Projetos.html
+=====================================================
+*/
+
+.container-banner-projetos {
+    width: 100%;
+    min-height: 250px;
+    background-color: #3b8766;
+}
+
+.coluna-texto-img {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.texto-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 40px;
+    width: 50%;
+    min-width: 300px;
+    color: #fff;
+}
+
+.texto-banner h1,
+.texto-banner h2,
+.texto-banner h4 {
+    margin: 8px 0;
+}
+
+.texto-banner h1 {
+    font-size: 36px;
+}
+
+.texto-banner h4 {
+    font-weight: 400;
+}
+
+.banner {
+    width: 50%;
+    max-height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.pesquisa {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 50px;
+}
+
+.pesquisa .campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.pesquisa .linha-busca {
+    display: flex;
+    width: 100%;
+}
+
+.pesquisa input {
+    width: 300px;
+    max-width: 100%;
+    padding: 10px 15px;
+    text-align: left;
+    border: none;
+    background-color: #3b8766;
+    color: #fff;
+    border-radius: 20px 0 0 20px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.pesquisa input::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.btn-pesquisar {
+    border: none;
+    background-color: #FBD012;
+    padding: 10px 15px;
+    border-radius: 0 20px 20px 0;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.filtros {
+    background-color: #3b8766;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    font-family: inherit;
+    font-size: 15px;
+    max-width: 260px;
+}
+
+.filtros option {
+    background-color: #fff;
+    color: black;
+}
+
+.filtro-sede {
+    margin: 0 0 6px;
+    font-size: 15px;
+}
+
+.atividades {
+    background-color: #bebfbf;
+    padding: 50px;
+}
+
+.atividades h2 {
+    margin-top: 0;
+    color: #23523b;
+}
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.projeto {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+}
+
+.projeto h3 {
+    color: #41976D;
+    margin: 0 0 10px;
+    font-size: 22px;
+}
+
+.projeto p {
+    margin: 0 0 10px;
+}
+
+.projeto .btn-projetos {
+    margin-top: auto;
+}
+
+.sem-resultado {
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/*
+=====================================================
+                    Fim config Projetos.html
+=====================================================
+*/
+
+/*
+=====================================================
+                    Inicio config Doar.html
+=====================================================
+*/
+
+.cartoes-doar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 70px 70px;
+}
+
+.cartao {
+    background-color: #fff;
+    border: 2px solid #41976D;
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cartao h3 {
+    color: #41976D;
+    margin-top: 0;
+}
+
+.cartao p {
+    margin: 0 0 10px;
+}
+
+.cartao .btn-projetos {
+    margin-top: auto;
+}
+
+.fundo-cinza {
+    background-color: #d7d6d6;
+    padding: 50px clamp(20px, 8vw, 160px);
+}
+
+.fundo-cinza h2 {
+    color: #41976D;
+    margin-top: 0;
+}
+
+/*
+=====================================================
+                    Fim config Doar.html
+=====================================================
+*/
+
+/*
+=====================================================
+                    Inicio config cadastro.html
+=====================================================
+*/
+
+.form-inscricao {
+    max-width: 800px;
+    margin: 0 auto 70px;
+    padding: 0 20px;
+}
+
+.form-inscricao fieldset {
+    border: 2px solid #41976D;
+    border-radius: 10px;
+    margin: 0 0 24px;
+    padding: 16px 24px 24px;
+}
+
+.form-inscricao legend {
+    color: #41976D;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.form-inscricao label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 14px 0 6px;
+}
+
+.form-inscricao input[type="text"],
+.form-inscricao input[type="email"],
+.form-inscricao input[type="tel"],
+.form-inscricao input[type="date"],
+.form-inscricao select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #3b8766;
+    border-radius: 10px;
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.form-inscricao input:user-invalid,
+.form-inscricao select:user-invalid {
+    border-color: #b3261e;
+}
+
+.form-inscricao .linha-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.form-inscricao label.check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+}
+
+.form-inscricao input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #41976D;
+}
+
+.form-inscricao .btn-acao {
+    width: 100%;
+}
+
+.msg-form {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #d9efe3;
+    color: #23523b;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*
+=====================================================
+                    Fim config cadastro.html
+=====================================================
+*/
