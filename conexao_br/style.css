@@ -593,7 +593,7 @@ footer h4 {
 .form-inscricao input[type="tel"],
 .form-inscricao input[type="date"],
 .form-inscricao select {
-    width: 100%;
+    width: 95%;
     padding: 10px 15px;
     border: 2px solid #3b8766;
     border-radius: 10px;

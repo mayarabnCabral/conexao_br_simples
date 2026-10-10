@@ -1,4 +1,3 @@
-/* Conexão BR - máscaras do formulário, data máxima e filtro de projetos */
 (function () {
     "use strict";
 
